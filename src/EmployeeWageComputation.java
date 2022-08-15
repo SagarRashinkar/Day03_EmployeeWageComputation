@@ -7,6 +7,7 @@ public class EmployeeWageComputation {
     public static final int FULL_TIME_HR = 8;
     public static final int PART_TIME_HR = 4;
     public static final int WORK_DAY_PER_MONTH = 20;
+    public static final int TOT_WORK_HR_PER_MONTH = 100;
 
     public static void main(String[] args) {
 
@@ -14,7 +15,7 @@ public class EmployeeWageComputation {
 
         int totalWorkHr = 0;
 
-        for (int day = 1; day<=WORK_DAY_PER_MONTH; day++) {
+        for (int day = 1; day<=WORK_DAY_PER_MONTH && totalWorkHr<=TOT_WORK_HR_PER_MONTH; day++) {
 
             int empCheck = (int) (Math.floor(Math.random() * 10) % 3);
 
